@@ -3,6 +3,12 @@ import numpy as np
 import joblib
 import pandas as pd
 
+from sklearn.pipeline import Pipeline
+from sklearn.impute import SimpleImputer
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.model_selection import train_test_split
+
 # Load model
 model = joblib.load("mental_health_model.pkl")
 
